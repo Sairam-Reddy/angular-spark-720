@@ -10,12 +10,12 @@ declare var kendo: any;
 })
 export class CreateWorkflowComponent implements AfterViewInit {
   ngAfterViewInit() {
-    // kendo.jQuery(function() {
-    //   var Shape = kendo.dataviz.diagram.Shape,
-    //     Connection = kendo.dataviz.diagram.Connection,
-    //     Rect = kendo.dataviz.diagram.Rect,
-    //     Point = kendo.dataviz.diagram.Point,
-    //     selected;
+    kendo.jQuery(function() {
+      var Shape = kendo.dataviz.diagram.Shape,
+        Connection = kendo.dataviz.diagram.Connection,
+        Rect = kendo.dataviz.diagram.Rect,
+        Point = kendo.dataviz.diagram.Point,
+        selected;
 
     //   kendo.jQuery("#canvasProperties").on("change", canvasPropertiesChange);
 
@@ -190,74 +190,74 @@ export class CreateWorkflowComponent implements AfterViewInit {
     //     diagram.zoom(value);
     //   });
 
-    //   function reset() {
-    //     diagram.clear();
-    //   }
+      function reset() {
+        diagram.clear();
+      }
 
-    //   function undo() {
-    //     diagram.undo();
-    //   }
+      function undo() {
+        diagram.undo();
+      }
 
-    //   function redo() {
-    //     diagram.redo();
-    //   }
+      function redo() {
+        diagram.redo();
+      }
 
-    //   function copyItem() {
-    //     diagram.copy();
-    //   }
+      function copyItem() {
+        diagram.copy();
+      }
 
-    //   function pasteItem() {
-    //     diagram.paste();
-    //   }
+      function pasteItem() {
+        diagram.paste();
+      }
 
-    //   var actions = {
-    //     blank: reset,
-    //     undo: undo,
-    //     redo: redo,
-    //     copy: copyItem,
-    //     paste: pasteItem
-    //   };
+      var actions = {
+        blank: reset,
+        undo: undo,
+        redo: redo,
+        copy: copyItem,
+        paste: pasteItem
+      };
 
-    //   kendo.jQuery("#menu ul").kendoMenu({
-    //     dataSource: [
-    //       {
-    //         text: "New",
-    //         spriteCssClass: "new-item",
-    //         items: [
-    //           {
-    //             text: "Blank",
-    //             spriteCssClass: "blank-item",
-    //             cssClass: "active"
-    //           }
-    //         ]
-    //       },
-    //       {
-    //         text: "Open<input id='upload' type='file' name='files' />",
-    //         encoded: false,
-    //         spriteCssClass: "open-item",
-    //         cssClass: "upload-item"
-    //       },
-    //       {
-    //         text: "Save<a id='export' download='diagram.json'></a>",
-    //         encoded: false,
-    //         spriteCssClass: "save-item"
-    //       },
-    //       { text: "Undo", spriteCssClass: "undo-item", cssClass: "active" },
-    //       { text: "Redo", spriteCssClass: "redo-item", cssClass: "active" },
-    //       { text: "Copy", spriteCssClass: "copy-item", cssClass: "active" },
-    //       { text: "Paste", spriteCssClass: "paste-item", cssClass: "active" }
-    //     ],
-    //     select: function(e) {
-    //       var item = kendo.jQuery(e.item),
-    //         itemText = item.children(".k-link").text();
+      kendo.jQuery("#menu ul").kendoMenu({
+        dataSource: [
+          {
+            text: "New",
+            spriteCssClass: "new-item",
+            items: [
+              {
+                text: "Blank",
+                spriteCssClass: "blank-item",
+                cssClass: "active"
+              }
+            ]
+          },
+          {
+            text: "Open<input id='upload' type='file' name='files' />",
+            encoded: false,
+            spriteCssClass: "open-item",
+            cssClass: "upload-item"
+          },
+          {
+            text: "Save<a id='export' download='diagram.json'></a>",
+            encoded: false,
+            spriteCssClass: "save-item"
+          },
+          { text: "Undo", spriteCssClass: "undo-item", cssClass: "active" },
+          { text: "Redo", spriteCssClass: "redo-item", cssClass: "active" },
+          { text: "Copy", spriteCssClass: "copy-item", cssClass: "active" },
+          { text: "Paste", spriteCssClass: "paste-item", cssClass: "active" }
+        ],
+        select: function(e) {
+          var item = kendo.jQuery(e.item),
+            itemText = item.children(".k-link").text();
 
-    //       if (!item.hasClass("active")) {
-    //         return;
-    //       }
+          if (!item.hasClass("active")) {
+            return;
+          }
 
-    //       actions[itemText.charAt(0).toLowerCase() + itemText.slice(1)]();
-    //     }
-    //   });
+          actions[itemText.charAt(0).toLowerCase() + itemText.slice(1)]();
+        }
+      });
 
     //   kendo.jQuery("#export").on("click", function() {
     //     var json = JSON.stringify(diagram.save()),
@@ -304,91 +304,91 @@ export class CreateWorkflowComponent implements AfterViewInit {
     //     ]
     //   });
 
-    //   var diagram = kendo
-    //     .jQuery("#diagram")
-    //     .kendoDiagram({
-    //       theme: "default",
-    //       dataSource: {
-    //         data: [
-    //           {
-    //             name: "0",
-    //             items: [
-    //               {
-    //                 name: "0"
-    //               }
-    //             ]
-    //           }
-    //         ],
-    //         schema: {
-    //           model: {
-    //             children: "items"
-    //           }
-    //         }
-    //       },
-    //       shapeDefaults: {
-    //         width: 120,
-    //         height: 120,
-    //         fill: "#8ebc00"
-    //       },
-    //       layout: {
-    //         type: "tree",
-    //         subtype: "right"
-    //       },
-    //       select: function(e) {
-    //         if (e.selected.length) {
-    //           selected = e.selected;
-    //           var element = e.selected[0];
-    //           if (element instanceof Shape) {
-    //             updateShapeProperties(element.options);
-    //           } else {
-    //             updateConnectionProperties(element.options);
-    //           }
-    //         }
-    //       }
-    //     })
-    //     .getKendoDiagram();
+      var diagram = kendo
+        .jQuery("#diagram")
+        .kendoDiagram({
+          theme: "default",
+          dataSource: {
+            data: [
+              {
+                name: "0",
+                items: [
+                  {
+                    name: "0"
+                  }
+                ]
+              }
+            ],
+            schema: {
+              model: {
+                children: "items"
+              }
+            }
+          },
+          shapeDefaults: {
+            width: 120,
+            height: 120,
+            fill: "#8ebc00"
+          },
+          layout: {
+            type: "tree",
+            subtype: "right"
+          },
+          select: function(e) {
+            if (e.selected.length) {
+              selected = e.selected;
+              var element = e.selected[0];
+              if (element instanceof Shape) {
+                updateShapeProperties(element.options);
+              } else {
+                updateConnectionProperties(element.options);
+              }
+            }
+          }
+        })
+        .getKendoDiagram();
 
-    //   function updateShapeProperties(shape) {
-    //     kendo
-    //       .jQuery("#shapeBackgroundColorPicker")
-    //       .getKendoColorPicker()
-    //       .value(kendo.parseColor(shape.background));
-    //     kendo
-    //       .jQuery("#shapeStrokeColorPicker")
-    //       .getKendoColorPicker()
-    //       .value(kendo.parseColor(shape.stroke.color));
-    //     kendo
-    //       .jQuery("#shapeStrokeWidth")
-    //       .getKendoNumericTextBox()
-    //       .value(shape.stroke.width);
-    //     kendo
-    //       .jQuery("#shapeWidth")
-    //       .getKendoNumericTextBox()
-    //       .value(shape.width);
-    //     kendo
-    //       .jQuery("#shapeHeight")
-    //       .getKendoNumericTextBox()
-    //       .value(shape.height);
-    //     kendo
-    //       .jQuery("#shapePositionX")
-    //       .getKendoNumericTextBox()
-    //       .value(shape.x);
-    //     kendo
-    //       .jQuery("#shapePositionY")
-    //       .getKendoNumericTextBox()
-    //       .value(shape.y);
-    //   }
+      function updateShapeProperties(shape) {
+        kendo
+          .jQuery("#shapeBackgroundColorPicker")
+          .getKendoColorPicker()
+          .value(kendo.parseColor(shape.background));
+        kendo
+          .jQuery("#shapeStrokeColorPicker")
+          .getKendoColorPicker()
+          .value(kendo.parseColor(shape.stroke.color));
+        kendo
+          .jQuery("#shapeStrokeWidth")
+          .getKendoNumericTextBox()
+          .value(shape.stroke.width);
+        kendo
+          .jQuery("#shapeWidth")
+          .getKendoNumericTextBox()
+          .value(shape.width);
+        kendo
+          .jQuery("#shapeHeight")
+          .getKendoNumericTextBox()
+          .value(shape.height);
+        kendo
+          .jQuery("#shapePositionX")
+          .getKendoNumericTextBox()
+          .value(shape.x);
+        kendo
+          .jQuery("#shapePositionY")
+          .getKendoNumericTextBox()
+          .value(shape.y);
+      }
 
-    //   function updateConnectionProperties(shape) {
-    //     kendo
-    //       .jQuery("#connectionStartCap")
-    //       .getKendoDropDownList()
-    //       .value(shape.startCap);
-    //     kendo
-    //       .jQuery("#connectionEndCap")
-    //       .getKendoDropDownList()
-    //       .value(shape.endCap);
-    //   }
+      function updateConnectionProperties(shape) {
+        kendo
+          .jQuery("#connectionStartCap")
+          .getKendoDropDownList()
+          .value(shape.startCap);
+        kendo
+          .jQuery("#connectionEndCap")
+          .getKendoDropDownList()
+          .value(shape.endCap);
+      }
 
     //   kendo
     //     .jQuery("#shapesPanelBar")
@@ -486,27 +486,27 @@ export class CreateWorkflowComponent implements AfterViewInit {
     //       .open();
     //   });
 
-    //   kendo.jQuery("#shapesPanelBar .shapeItem").kendoDraggable({
-    //     hint: function() {
-    //       return this.element.clone();
-    //     }
-    //   });
+      kendo.jQuery("#shapeItems .shape-item").kendoDraggable({
+        hint: function() {
+          return this.element.clone();
+        }
+      });
 
-    //   kendo.jQuery("#diagram").kendoDropTarget({
-    //     drop: function(e) {
-    //       var item, pos, transformed;
-    //       if (e.draggable.hint) {
-    //         item = e.draggable.hint.data("shape");
-    //         pos = e.draggable.hintOffset;
-    //         pos = new Point(pos.left, pos.top);
-    //         var transformed = diagram.documentToModel(pos);
-    //         item.x = transformed.x;
-    //         item.y = transformed.y;
+      kendo.jQuery("#diagram").kendoDropTarget({
+        drop: function(e) {
+          var item, pos, transformed;
+          if (e.draggable.hint) {
+            item = e.draggable.hint.data("shape");
+            pos = e.draggable.hintOffset;
+            pos = new Point(pos.left, pos.top);
+            var transformed = diagram.documentToModel(pos);
+            item.x = transformed.x;
+            item.y = transformed.y;
 
-    //         diagram.addShape(item);
-    //       }
-    //     }
-    //   });
-    // });
+            diagram.addShape(item);
+          }
+        }
+      });
+    });
   }
 }
