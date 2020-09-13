@@ -5,6 +5,30 @@
 }
 
 
+.shape-items {
+  display: flex;  
+  flex-direction: column;
+}
+
+.shape-item
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-position: center;
+}
+
+.shape-item__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 .pane-content
 {
     scrollable: false;
@@ -267,15 +291,7 @@
     background: #fff;
 }
 
-.shapeItem
-{
-    margin-top: 10px;
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    background-image: url("../images/diagram-toolbox.png");
-    background-size: auto 100%;
-}
+
 
 #shapesPanelBar span
 {
