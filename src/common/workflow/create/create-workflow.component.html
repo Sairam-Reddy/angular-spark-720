@@ -5,8 +5,8 @@
 	<ul></ul>
 </div>
 
-<mat-sidenav-container class="example-container">
-	<mat-sidenav opened mode="side">
+<mat-drawer-container class="example-container">
+	<mat-drawer mode="side" opened>
 		<mat-toolbar>
 			<span>Toobar</span>
 			<mat-divider></mat-divider>
@@ -42,20 +42,122 @@
 				</mat-menu>
 			</mat-expansion-panel>
 		</mat-accordion>
-	</mat-sidenav>
-	<mat-sidenav opened mode="side" position="end">Properties</mat-sidenav>
+	</mat-drawer>
 
-
-
-	<div class="pane-content">
-		Content
-		<div id="diagram"></div>
+	<!-- <mat-sidenav opened mode="side" position="end">Properties
+    	<div id="right-pane">
+		<div class="pane-content">
+			<ul id="configurationPanelBar">
+				<li>
+					Canvas Properties
+					<div id="canvasProperties">
+						<ul>
+							<li>
+								<span>Background Color:</span>
+								<input id="canvasBackgroundColorPicker" class="colorPicker" />
+                            </li>
+							<li>
+								<span>Layout:</span>
+								<input id="canvasLayout" />
+                            </li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					Shape Properties
+					<div id="shapeProperties">
+						<ul>
+							<li>
+								<span>Background Color:</span>
+								<input id="shapeBackgroundColorPicker" class="colorPicker" />
+                            </li>
+							<li>
+								<span>Stroke Color:</span>
+								<input id="shapeStrokeColorPicker" class="colorPicker" />
+                            </li>
+							<li>
+								<span>Stroke Width:</span>
+								<input type="text" id="shapeStrokeWidth" class="numeric" />
+                            </li>
+							<li>
+								<span>Width:</span>
+								<input type="text" id="shapeWidth" class="numeric" />
+                            </li>
+							<li>
+								<span>Height:</span>
+								<input type="text" id="shapeHeight" class="numeric" />
+                            </li>
+							<li>
+								<span>Position X:</span>
+								<input type="text" id="shapePositionX" class="numeric" />
+                            </li>
+							<li>
+								<span>Position Y:</span>
+								<input type="text" id="shapePositionY" class="numeric" />
+                            </li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					Connection Properties
+					<div id="connectionProperties">
+						<ul>
+							<li>
+								<span>Start Cap:</span>
+								<input id="connectionStartCap" />
+                            </li>
+							<li>
+								<span>End Cap:</span>
+								<input id="connectionEndCap" />
+                            </li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					Align
+					<div id="alignConfiguration"
+						style="width: 100%; padding: 10px; box-sizing: border-box; text-align: left;">
+						<button class="configurationButtons" data-position="top">
+                            <span class="alignTop"></span>
+                        </button><button class="configurationButtons" data-position="bottom">
+                            <span class="alignBottom"></span>
+                        </button><button class="configurationButtons" data-position="left">
+                            <span class="alignLeft"></span>
+                        </button><button class="configurationButtons" data-position="right">
+                            <span class="alignRight"></span>
+                        </button>
+					</div>
+				</li>
+				<li>
+					Arrange
+					<div id="arrangeConfiguration">
+						<div style="width: 100%; padding: 10px; box-sizing: border-box; text-align: left;">
+							<button class="configurationButtons">
+                                <span class="toFront"></span>
+                            </button><button class="configurationButtons">
+                                <span class="toBack"></span>
+                            </button>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
 	</div>
+  </mat-sidenav> -->
+
+
+	<mat-drawer-content class="content">
+		<!-- <div id="center-pane">
+			<div class="pane-content"> -->
+				<div id="diagram"></div>
+			<!-- </div> -->
+		<!-- </div> -->
+	</mat-drawer-content>
 
 
 
 
-</mat-sidenav-container>
+</mat-drawer-container>
 
 
 <!-- <div id="menu">
@@ -134,6 +236,8 @@
 			<div id="diagram"></div>
 		</div>
 	</div>
+
+  
 	<div id="right-pane">
 		<div class="pane-content">
 			<ul id="configurationPanelBar">
@@ -233,6 +337,7 @@
 		</div>
 	</div>
 </div>
+
 <div id="bottom-box">
 	<input id="diagramZoom" />
 	<input type="text" id="diagramZoomIndicator" class="k-textbox" value="100" style="width: 40px; vertical-align: middle;" />
@@ -272,4 +377,4 @@
 
 		<p>Copyright &copy; 2020, Progress Software Corporation and/or its subsidiaries or affiliates. All Rights
 			Reserved.</p>
-	</div> -->
+	</div>  -->

@@ -29,10 +29,15 @@
 }
 
 
-.pane-content
+ .pane-content
 {
     scrollable: false;
+} 
+
+.content {
+  width: 300px;
 }
+
 
 .configurationButtons
 {
@@ -216,6 +221,7 @@
 #center-pane .pane-content
 {
     height: 100%;
+    width: 50%;
 }
 
 .k-panelbar .k-content ul
