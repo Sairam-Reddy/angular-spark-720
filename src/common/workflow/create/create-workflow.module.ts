@@ -8,6 +8,9 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { CreateWorkflowComponent } from "./create-workflow.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatMenuModule} from '@angular/material/menu';
+import { MatButtonModule } from "@angular/material/button";
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   imports: [
@@ -16,7 +19,10 @@ import {MatExpansionModule} from '@angular/material/expansion';
     FormsModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatDividerModule
   ],
   declarations: [CreateWorkflowComponent],
   exports: [CreateWorkflowComponent]
