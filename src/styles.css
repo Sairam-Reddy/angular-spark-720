@@ -4,8 +4,9 @@
 /*
  *    Kendo
 */
-@import "content/style/kendo.common.min.css";
-@import "content/style/kendo.fiori.min.css";
+/* @import "content/style/kendo.common.min.css";
+@import "content/style/kendo.fiori.min.css"; */
 
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
+
                                                                                           

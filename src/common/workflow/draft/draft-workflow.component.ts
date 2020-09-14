@@ -11,12 +11,12 @@ declare var kendo: any;
 export class DraftWorkflowComponent implements AfterViewInit {
   ngAfterViewInit() {
     kendo.jQuery(function() {
-      kendo.jQuery("#splitter").kendoSplitter({
-        panes: [
-          { collapsible: true, size: "200px" },
-          { collapsible: false, scrollable: false }
-        ]
-      });
+      // kendo.jQuery("#splitter").kendoSplitter({
+      //   panes: [
+      //     { collapsible: true, size: "200px" },
+      //     { collapsible: false, scrollable: false }
+      //   ]
+      // });
 
       var diagram = kendo
         .jQuery("#diagram")
@@ -44,12 +44,12 @@ export class DraftWorkflowComponent implements AfterViewInit {
         })
         .getKendoDiagram();
 
-      kendo
-        .jQuery("#shapesPanelBar")
-        .kendoPanelBar({
-          expandMode: "multiple"
-        })
-        .getKendoPanelBar();
+      // kendo
+      //   .jQuery("#shapesPanelBar")
+      //   .kendoPanelBar({
+      //     expandMode: "multiple"
+      //   })
+      //   .getKendoPanelBar();
 
       kendo.jQuery("#shapesPanelBar").kendoDraggable({
         filter: ".shapeItem",

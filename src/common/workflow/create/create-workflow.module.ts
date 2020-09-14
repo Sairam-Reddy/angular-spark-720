@@ -23,8 +23,7 @@ import { DraftWorkflowModule } from "../draft/draft-worklfow.module";
     MatExpansionModule,
     MatMenuModule,
     MatButtonModule,
-    MatDividerModule,
-    DraftWorkflowModule
+    MatDividerModule    
   ],
   declarations: [CreateWorkflowComponent],
   exports: [CreateWorkflowComponent]
