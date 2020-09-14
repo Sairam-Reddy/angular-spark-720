@@ -1,4 +1,6 @@
 import { Component, AfterViewInit } from "@angular/core";
+import { DomSanitizer } from "@angular/platform-browser";
+import { MatIconRegistry } from "@angular/material/icon";
 
 declare var kendo: any;
 
@@ -9,6 +11,40 @@ declare var kendo: any;
   styleUrls: ["draft-workflow.component.css"]
 })
 export class DraftWorkflowComponent implements AfterViewInit {
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+    iconRegistry.addSvgIcon(
+      "new",
+      sanitizer.bypassSecurityTrustResourceUrl(
+        "content/icons/new.svg"
+      )
+    );
+
+    iconRegistry.addSvgIcon(
+      "open",
+      sanitizer.bypassSecurityTrustResourceUrl(
+       "content/icons/open.svg"
+      )
+    );
+    iconRegistry.addSvgIcon(
+      "save",
+      sanitizer.bypassSecurityTrustResourceUrl(
+         "content/icons/save.svg"
+      )
+    );
+    iconRegistry.addSvgIcon(
+      "undo",
+      sanitizer.bypassSecurityTrustResourceUrl(
+        "content/icons/undo.svg"
+      )
+    );
+    iconRegistry.addSvgIcon(
+      "redo",
+      sanitizer.bypassSecurityTrustResourceUrl(
+        "content/icons/redo.svg"
+      )
+    );
+  }
+
   ngAfterViewInit() {
     kendo.jQuery(function() {
       var diagram = kendo
