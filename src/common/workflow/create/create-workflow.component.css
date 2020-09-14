@@ -1,6 +1,6 @@
 .example-container { 
   display: flex;
-  width: 500px;
+  width: 800px;
   height: 800px;
 }
 
@@ -39,7 +39,7 @@
 } 
 
 .content {
-  width: 300px;
+  width: 500px;
 }
 
 
