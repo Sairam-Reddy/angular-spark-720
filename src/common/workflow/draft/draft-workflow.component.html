@@ -4,10 +4,18 @@
      <mat-icon [svgIcon]="'new'" class="toolbar-icon" aria-hidden="false"></mat-icon>
       New
       </button>
-		<button mat-raised-button>Open</button>
-		<button mat-raised-button>Save</button>
-		<button mat-raised-button>Undo</button>
-		<button mat-raised-button>Redo</button>
+		<button mat-raised-button>
+       <mat-icon [svgIcon]="'open'" class="toolbar-icon" aria-hidden="false"></mat-icon>
+      Open</button>
+		<button mat-raised-button>
+       <mat-icon [svgIcon]="'save'" class="toolbar-icon" aria-hidden="false"></mat-icon>
+      Save</button>
+		<button mat-raised-button>
+       <mat-icon [svgIcon]="'undo'" class="toolbar-icon" aria-hidden="false"></mat-icon>
+      Undo</button>
+		<button mat-raised-button>
+       <mat-icon [svgIcon]="'redo'" class="toolbar-icon" aria-hidden="false"></mat-icon>
+      Redo</button>
 		<button mat-raised-button (click)="exportAsPDF()">Export as PDF</button>
 		<button mat-raised-button (click)="exportAsImage()">Export as Image</button>
 	</div>

@@ -22,25 +22,25 @@ export class DraftWorkflowComponent implements AfterViewInit {
     iconRegistry.addSvgIcon(
       "open",
       sanitizer.bypassSecurityTrustResourceUrl(
-       "content/icons/open.svg"
+       "https://raw.githubusercontent.com/Sairam-Reddy/angular-spark-720/master/src/content/icons/open.svg"
       )
     );
     iconRegistry.addSvgIcon(
       "save",
       sanitizer.bypassSecurityTrustResourceUrl(
-         "content/icons/save.svg"
+         "https://raw.githubusercontent.com/Sairam-Reddy/angular-spark-720/master/src/content/icons/save.svg"
       )
     );
     iconRegistry.addSvgIcon(
       "undo",
       sanitizer.bypassSecurityTrustResourceUrl(
-        "content/icons/undo.svg"
+        "https://raw.githubusercontent.com/Sairam-Reddy/angular-spark-720/master/src/content/icons/undo.svg"
       )
     );
     iconRegistry.addSvgIcon(
       "redo",
       sanitizer.bypassSecurityTrustResourceUrl(
-        "content/icons/redo.svg"
+        "https://raw.githubusercontent.com/Sairam-Reddy/angular-spark-720/master/src/content/icons/redo.svg"
       )
     );
   }
