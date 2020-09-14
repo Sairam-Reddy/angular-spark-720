@@ -15,7 +15,7 @@ export class DraftWorkflowComponent implements AfterViewInit {
     iconRegistry.addSvgIcon(
       "new",
       sanitizer.bypassSecurityTrustResourceUrl(
-        "content/icons/new.svg"
+        "https://raw.githubusercontent.com/Sairam-Reddy/angular-spark-720/master/src/content/icons/new.svg"
       )
     );
 

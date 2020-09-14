@@ -35,6 +35,10 @@
   height: 50px;
 }
 
+.toolbar-icon {
+  width: 16px;
+}
+
 .example-button-row {
   display: table-cell;
   width: 490px;
