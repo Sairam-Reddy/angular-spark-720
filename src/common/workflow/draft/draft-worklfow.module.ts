@@ -5,12 +5,12 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import "@progress/kendo-ui";
 
 import { MatToolbarModule } from "@angular/material/toolbar";
-import { CreateWorkflowComponent } from "./create-workflow.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatMenuModule} from '@angular/material/menu';
 import { MatButtonModule } from "@angular/material/button";
 import {MatDividerModule} from '@angular/material/divider';
+import { DraftWorkflowComponent } from "./draft-workflow.component";
 
 @NgModule({
   imports: [
@@ -24,7 +24,7 @@ import {MatDividerModule} from '@angular/material/divider';
     MatButtonModule,
     MatDividerModule
   ],
-  declarations: [CreateWorkflowComponent],
-  exports: [CreateWorkflowComponent]
+  declarations: [DraftWorkflowComponent],
+  exports: [DraftWorkflowComponent]
 })
 export class DraftWorkflowModule {}
