@@ -4,11 +4,11 @@ declare var kendo: any;
 
 /** @title Implicit main content with two sidenavs */
 @Component({
-  selector: "create-workflow",
-  templateUrl: "create-workflow.component.html",
-  styleUrls: ["create-workflow.component.css"]
+  selector: "view-workflow",
+  templateUrl: "view-workflow.component.html",
+  styleUrls: ["view-workflow.component.css"]
 })
-export class CreateWorkflowComponent implements AfterViewInit {
+export class ViewWorkflowComponent implements AfterViewInit {
   ngAfterViewInit() {
     kendo.jQuery(function() {
       var diagram = kendo
