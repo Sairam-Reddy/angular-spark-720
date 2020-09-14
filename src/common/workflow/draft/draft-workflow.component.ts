@@ -52,7 +52,7 @@ export class DraftWorkflowComponent implements AfterViewInit {
       //   .getKendoPanelBar();
 
       kendo.jQuery("#shapesPanelBar").kendoDraggable({
-        filter: ".shapeItem",
+        filter: ".shape-item",
         hint: function(element) {
           return element.clone();
         }
