@@ -11,13 +11,6 @@ declare var kendo: any;
 export class DraftWorkflowComponent implements AfterViewInit {
   ngAfterViewInit() {
     kendo.jQuery(function() {
-      // kendo.jQuery("#splitter").kendoSplitter({
-      //   panes: [
-      //     { collapsible: true, size: "200px" },
-      //     { collapsible: false, scrollable: false }
-      //   ]
-      // });
-
       var diagram = kendo
         .jQuery("#diagram")
         .kendoDiagram({
@@ -66,7 +59,7 @@ export class DraftWorkflowComponent implements AfterViewInit {
 
             var item = e.draggable.hint.data("shape");
             var newShape = diagram.addShape(item);
-            diagram.connect(targetShape, newShape);
+            // diagram.connect(targetShape, newShape);
             diagram.layout(diagram.options.layout);
           }
         }
