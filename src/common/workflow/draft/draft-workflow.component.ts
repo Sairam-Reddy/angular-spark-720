@@ -77,4 +77,31 @@ export class DraftWorkflowComponent implements AfterViewInit {
       }
     });
   }
+
+  exportAsPDF() {
+    var diagram = kendo.jQuery("#diagram").getKendoDiagram();
+    diagram
+      .exportPDF({
+        paperSize: "auto",
+        margin: { left: "1cm", top: "1cm", right: "1cm", bottom: "1cm" }
+      })
+      .done(function(data) {
+        kendo.saveAs({
+          dataURI: data,
+          fileName: "diagram.pdf",
+          proxyURL: "https://demos.telerik.com/kendo-ui/service/export"
+        });
+      });
+  }
+
+  exportAsImage() {
+    var diagram = kendo.jQuery("#diagram").getKendoDiagram();
+    diagram.exportImage().done(function(data) {
+      kendo.saveAs({
+        dataURI: data,
+        fileName: "diagram.png",
+        proxyURL: "https://demos.telerik.com/kendo-ui/service/export"
+      });
+    });
+  }
 }
